@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div style="background-color:blue ; color:white; padding:0.5% ; margin-bottom:2%; display: flex; justify-content:left; " >
+        <img style="width:12% ;" src="{%static 'images/logo2.png' %}" alt="">
+        <h1 style="position:relative; left:28%; ">Xerox Orders</h1>
+       </div>
+     
+    {% for i in data %}
+    <div style="background-color:orange; padding:2%; " >
+    <ul style="font-size:1.5vw ;" >
+         
+         <li style="font-size:1.5vw ;" > User Name : <span style="font-weight:bolder ;" > {{i.username}} </span> </li>
+         <li  >University ID : <span style="font-weight:bolder ;"> {{i.usn}} </span> </li>
+         <li>Printout Order : <span style="font-weight:bolder ;"> {{i.print}} </span> </li>
+         <li>Binding Order :<span style="font-weight:bolder ;">  {{i.bindings}} </span> </li>
+         <li>Printout Type : <span style="font-weight:bolder ;">{{i.print_type}} </span> </li>
+         <li>File : <span style="font-weight:bolder ;" >{{i.file}} </span> </li>
+         <li>Total Pages : <span style="font-weight:bolder ;"> {{i.total_pages}} </span> </li>
+         <li>Date : <span style="font-weight:bolder ;" >{{i.date}} </span> </li>
+         <li>Time :<span style="font-weight:bolder ;">{{i.time}} </span> </li>
+         <li>Print Status : <span style="font-weight:bolder ;"> {{i.print_status}} </span></li>
+         <li>Amount : <span style="font-weight:bolder ;" >{{i.amount}} </span> </li>
+         <li>Payment Done : <span style="font-weight:bolder ;"> {{i.payment}} </span> </li>
+         
+    </ul> 
+    </div>
+    <hr>
+    {% endfor %}  
+
+
+    <!-- <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="./index.html" class="navbar-brand">
+                    <img src="../images/AMC_mark_blue.png" alt="navbar-logo" class="logo">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="admin_section">
+        <div class="container">
+            <div class="header_text">
+                <h2>Intelligent Printshop Process Automation System</h2>
+            </div>
+            <div class="action_btns">
+                <button class="btn">DOC to PDF</button>
+                <button class="btn">IMAGE to PDF</button>
+                <button class="btn">EXCEL to PDF</button>
+                <button class="btn ml-auto" data-toggle="modal" data-target="#error_modal">Start To Print</button>
+            </div>
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Sl No</th>
+                        <th>File Name</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="success">
+                        <td>1</td>
+                        <td>Document One</td>
+                        <td>Success</td>
+                    </tr>
+                    <tr class="error">
+                        <td>2</td>
+                        <td>Document Two</td>
+                        <td>Failed</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <div class="modal" id="error_modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span>
+                <img src="../images/error_icon.svg" alt="error_icon">
+              </span>
+            </div>
+            <div class="modal-body">
+              <h3>Ooops!</h3>
+              <p>This document can not be printed!</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+            
+          </div>
+        </div>
+    </div>
+
+    
+
+    <script src="../js/jquery.slim.3.6.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/main.js"></script> -->
+</body>
+</html>

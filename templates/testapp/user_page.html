@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+</head>
+<body>
+    <div class="container">
+        <div style="background-color:blue ; color:white; padding:1% ; margin-bottom:2%; display: flex; justify-content:left; " >
+            <img style="width:12% ;" src="{% static 'images/logo2.png' %}" alt="">
+            <h2 style="position:relative; left:30%;">Print Order</h2>
+        </div>
+        
+        <form method="post" enctype="multipart/form-data " style="background-color: orange; padding:2%; color: white; " >
+            {{data.as_p}}
+            {%csrf_token%}
+            <br>
+            <input style="position: relative; left: 48%; "  type="submit" value="ORDER" class="btn btn-primary">
+        </form>
+    </div>
+<!-- 
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="navbar-brand">
+                    <img src="{% static 'images/logo.png'%}" alt="navbar-logo" class="logo">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="payment_section">
+        <div class="container">
+            <div class="header_text">
+                <h2>Intelligent Printshop Process Automation System</h2>
+            </div>
+            <div class="form_secttion">
+                <form action="./upi_section.html" id="payment_form" autocomplete="off">
+                    <div class="rows">
+                        <div class="form-group">
+                            <label for="username" class="">
+                                Enter Your Name
+                            </label>
+                            <input type="text" class="form-control" id="username" name="username" />
+                        </div>
+                        <div class="form-group">
+                            <label for="usn" class="">
+                                Enter Your USN
+                            </label>
+                            <input type="text" class="form-control" id="usn" name="usn" />
+                        </div>
+                    </div>
+                    <div class="rows">
+                        <div class="form-check">
+                            <label class="form-check-label d-flex">
+                              <span>Print</span>
+                              <input type="checkbox" class="form-check-input" name="print">
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label d-flex">
+                              <span>Binding</span>
+                              <input type="checkbox" class="form-check-input" name="binding">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="rows">
+                        <div class="form-group">
+                            <label for="print_type">Select Print Type:</label>
+                            <select class="form-control" name="print_type" id="print_type">
+                              <option value="" hidden></option>
+                              <option value="color">Color</option>
+                              <option value="b and W">Black and White</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="pages">Select Print Type:</label>
+                            <select class="form-control" name="pages" id="pages">
+                              <option value="" hidden></option>  
+                              <option value="front">Front</option>
+                              <option value="front and back">Front and Back</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="rows">
+                        <label for="files" style="width: 100%">
+                            <div class="files_overlay">
+                                <span class="">Select</span>
+                                <span id="files_names">No file(s) selected</span>
+                            </div>
+                        </label>
+                        <input hidden type="file" id="files" name="files" multiple class="form-control">
+                    </div>                    
+                    <div class="actions">
+                        <button type="button" class="btn payment_cta">Payment</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    
+
+    <script src="../js/jquery.slim.3.6.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/main.js"></script> -->
+</body>
+</html>

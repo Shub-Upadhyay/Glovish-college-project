@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Section</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body{
+            overflow-y: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="./index.html" class="navbar-brand">
+                    <img src="{%static 'images/logo.png'%}" alt="navbar-logo" class="logo">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="upi_section">
+        <form id="upi_form" action="./admin_page.html">
+            <div class="container">
+                <div class="description">
+                    <span>Lorem ipsum dolor ₹1.</span>
+                </div>
+                <h4>Preferred Payment Method</h4>
+                <ul class="upi_list">
+                    <li class="upi_items">
+                        <ul class="inner_list" style="padding-left:0px;">
+                            <label class="form-check-label">
+                                <input type="radio" hidden class="upi_check" name="selected_upi" value="gpay">
+                                <li class="upis">
+                                    <span class="upi_icon" style="width:30px">
+                                        <img src="{%static 'images/gpay.png' %}" alt="gpay-icon">
+                                    </span>
+                                    <span class="upi_name">UPI - Gpay</span>
+                                    <span class="chevron_right">
+                                        <img src="{%static 'images/chevron_right.png' %}" alt="chevron_right">
+                                    </span>
+                                </li>
+                            </label>
+                        </ul>
+                    </li>
+                    <li class="upi_items">
+                        <ul class="inner_list" style="padding-left:0px;">
+                            <label class="form-check-label">
+                                <input type="radio" hidden class="upi_check" name="selected_upi" value="phonepe">
+                                <li class="upis">
+                                    <span class="upi_icon" style="width:30px">
+                                        <img src="{%static 'images/phonepe.png'%}" alt="phonepe-icon">
+                                    </span>
+                                    <span class="upi_name">UPI - Phonepe</span>
+                                    <span class="chevron_right">
+                                        <img src="{%static 'images/chevron_right.png'%}" alt="chevron_right">
+                                    </span>
+                                </li>
+                            </label>
+                        </ul>
+                    </li>
+                    <li class="upi_items">
+                        <ul class="inner_list" style="padding-left:0px;">
+                            <label class="form-check-label">
+                                <input type="radio" hidden class="upi_check" name="selected_upi" value="paytm">
+                                <li class="upis">
+                                    <span class="upi_icon">
+                                        <img src="{%static 'images/paytm.png'%}" alt="paytm-icon">
+                                    </span>
+                                    <span class="upi_name">UPI - Paytm</span>
+                                    <span class="chevron_right">
+                                        <img src="{%static 'images/chevron_right.png'%}" alt="chevron_right">
+                                    </span>
+                                </li>
+                            </label>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="actions">
+                    <button id="upi_cta" class="btn">Proceed</button>
+                </div>
+            </div>
+        </form>        
+        <!-- <div class="right_banner_abs">
+            <img src="../images/right_banner_upi.jpg" alt="right_banner_upi">
+        </div> -->
+        <!-- <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 left_column">
+                
+                <div>
+                    
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 right_banner">
+                
+            </div>
+        </div> -->
+    </main>
+    <div class="upi_banner">
+        <img src="{%static 'images/right_banner_upi_md.jpg'%}" class="right_banner_upi" alt="right_banner_upi">
+    </div>
+
+    <script src="../js/jquery.slim.3.6.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

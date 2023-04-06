@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-control:focus,
+button:focus {
+    /* outline: none !important; */
+    box-shadow: none !important;
+}
+
+input,
+select,
+.login_submit_btn {
+    width: 100%;
+    height: 50px !important;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    height: auto !important;
+}
+
+nav.navbar {
+    margin-bottom: 10px;
+}
+
+nav.navbar .navbar-brand {
+    width: 50px;
+    height: auto;
+}
+
+.logo {
+    width: 100%;
+}
+
+main.login_section,
+main.login_section .row,
+main.upi_section,
+main.upi_section .row {
+    height: 100%;
+}
+
+main.login_section .row .right_banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/banner_two.jpeg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    z-index: -9;
+}
+
+main.login_section .row .right_banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 28, 84, 0.4);
+    z-index: -10;
+}
+
+main.login_section .row .right_banner .college_logo_white {
+    width: 400px;
+    height: auto;
+    z-index: 10;
+}
+
+main.login_section .row .left_column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main.login_section .row .left_column .login-wrap {
+    width: 65%;
+    margin: auto;
+}
+
+main.login_section .row .left_column .login-wrap #login_form .form-group {
+    margin-bottom: 25px;
+}
+
+/* main.login_section .row .left_column .login-wrap #login_form .form-group input.valid{
+    color: #001C54;
+}
+
+main.login_section .row .left_column .login-wrap #login_form .form-group input.error{
+    color: red;
+    border: 1px solid red;
+} */
+
+main.login_section .row .left_column .login-wrap #login_form .form-group input:focus {
+    border: 1px solid #001C54;
+}
+
+main.login_section .row .left_column .login-wrap #login_form .login_submit_btn{
+    background-color: #001C54;
+    color: #fff;
+    text-transform: uppercase;
+    border: 1px solid #001C54;
+}
+
+main.login_section .row .left_column .login-wrap h2 {
+    margin-bottom: 25px;
+}
+
+main.login_section .row .left_column .login-wrap #login_form .login_submit_btn:hover,
+.payment_section .container .form_secttion #payment_form .actions .payment_cta:hover {
+    background-color: transparent;
+    color: #001C54;
+}
+
+
+
+/* main.login_section .row .col-sm-12 .login-wrap {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+}
+
+main.login_section .row .col-sm-12 .enable_mobile_screen {
+    display: none;
+}
+
+main.login_section .row .col-sm-12 .enable_mobile_screen.show {
+    width: 100%;
+    padding: 30px;
+    display: block;
+}
+
+main.login_section .row .col-sm-12 .enable_mobile_screen.show .navbar_brand {
+    display: inline-block;
+    width: 55px;
+}
+
+main.login_section .row .col-sm-12 .enable_mobile_screen.show .mobile_logo {
+    width: 100%;
+    height: auto;
+}
+
+main.login_section .row .col-xs-12 .login-wrap {
+    width: 80%;
+} */
+
+/* payment section */
+
+.payment_section {
+    padding-bottom: 50px;
+}
+
+.payment_section .container .form_secttion #payment_form .rows {
+    display: flex;
+    width: 100%;
+    gap: 30px;
+}
+
+.payment_section .container .header_text h2,
+.admin_section .container .header_text h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.payment_section .container .form_secttion #payment_form .rows {
+    margin-bottom: 30px;
+}
+
+.payment_section .container .form_secttion #payment_form .rows .form-group,
+.payment_section .container .form_secttion #payment_form .rows .form-check {
+    width: 50%;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.payment_section .container .form_secttion #payment_form .rows .form-check {
+    width: 100%;
+    padding-left: 0px !important;
+    /* padding-bottom: 10px; */
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.payment_section .container .form_secttion #payment_form .rows .form-check .form-check-label.d-flex {
+    width: 100%;
+    align-items: center;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    right: 0;
+    cursor: pointer;
+    height: 50px !important;
+    padding: 6px 12px;
+}
+
+.payment_section .container .form_secttion #payment_form .rows .form-check .form-check-input {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    right: 12px;
+}
+
+.payment_section .container .form_secttion #payment_form .rows .form-group label {
+    position: absolute;
+    top: 25%;
+    left: 16px;
+    margin-bottom: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    transition: all 0.2s ease-in;
+    cursor: text;
+}
+
+.payment_section .container .form_secttion #payment_form .rows label {
+    /* width: 100%; */
+    margin-bottom: 0px;
+}
+
+.payment_section .container .form_secttion #payment_form .rows .form-group label.floating {
+    top: -25%;
+    background-color: #fff;
+    font-size: 12px;
+}
+
+.payment_section .container .form_secttion #payment_form .rows .files_overlay {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding-left: 10px;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 10px;
+}
+
+.payment_section .container .form_secttion #payment_form .rows .files_overlay span:first-child {
+    /* width: 175px;
+    height: 45px; */
+    padding: 7px 50px;
+    background-color: #001C54;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment_section .container .form_secttion #payment_form .actions {
+    text-align: center;
+}
+
+.payment_section .container .form_secttion #payment_form .actions .payment_cta {
+    background-color: #001C54;
+    border: 1px solid #001C54;
+    color: #fff;
+    padding: 10px 50px;
+}
+
+/* UPI Section */
+
+.upi_section .container h4 {
+    color: #001C54;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 600px;
+}
+
+.upi_section .container .description {
+    width: 600px;
+    padding: 30px 20px;
+    color: #fff;
+    background-color: #001C54;
+    margin-bottom: 40px;
+}
+
+.upi_section .container ul.upi_list {
+    width: 600px;
+    margin-bottom: 0px;
+    list-style-type: none;
+    padding-left: 0px;
+    margin-bottom: 40px;
+}
+
+.upi_section .container ul.upi_list li.upis {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.upi_section .container ul.upi_list li.upis span.upi_icon {
+    width: 50px;
+}
+
+.upi_section .container ul.upi_list li.upis span.upi_icon img {
+    width: 100%;
+}
+
+.upi_section .container ul.upi_list li.upis span.chevron_right img {
+    width: 8px;
+}
+
+.upi_section .container ul.upi_list .upi_items {
+    /* padding: 20px; */
+    border: 1px solid #001C54;
+    border-bottom: none;
+}
+
+.upi_section .container ul.upi_list .upi_items:hover {
+    background-color: #001c5413;
+}
+
+.upi_section .container ul.upi_list .upi_items:last-child {
+    border-bottom: 1px solid #001C54;
+}
+
+.upi_section .container ul.upi_list .upi_items .inner_list label {
+    padding: 20px;
+    display: inline-block;
+    width: 100%;
+    border: 1px solid #001c5428;
+}
+
+.upi_section .container ul.upi_list .upi_items .inner_list label.selected {
+    background-color: #001c5428;
+    border: 1px solid #001c5428;
+}
+
+.upi_section .container .actions {
+    width: 600px;
+}
+
+.upi_section .container .actions button {
+    background-color: #001C54;
+    border: 1px solid #001C54;
+    color: #fff;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.upi_section .container .actions button:hover {
+    background-color: transparent;
+    border: 1px solid #001C54;
+    color: #001C54;
+}
+
+.upi_banner {
+    position: absolute;
+    right: -110px;
+    top: 0;
+    z-index: -1;
+}
+
+.admin_section .container .action_btns {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.admin_section .container .action_btns .btn {
+    padding: 5px 20px;
+    background-color: #001C54;
+    color: #fff;
+    font-size: 14px;
+}
+
+.admin_section .container table.table.table-bordered,
+.admin_section .container table.table.table-bordered thead th,
+.admin_section .container table.table.table-bordered tbody td {
+    border: 1px solid #001C54 !important;
+}
+
+.admin_section .container table.table tr {
+    text-align: center;
+}
+
+.admin_section .container table.table tr th:first-child {
+    width: 5rem;
+}
+
+.admin_section .container table.table.table-bordered tbody td {
+    font-size: 15px;
+    /* font-weight: bold; */
+}
+
+.admin_section .container table.table tbody tr.success td {
+    color: #4BB543;
+}
+
+.admin_section .container table.table tbody tr.error td {
+    color: #DB0D0D;
+}
+
+/* .upi_section .row .right_banner {
+    background-image: url("../images/banner_two.jpeg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+} */
+
+/* .upi_section .right_banner_abs{
+    width: 100%;
+    height: auto;
+} */
+/* .upi_section .right_banner_abs img{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    right: 0;
+    width: auto;
+    height: 100%;
+} */
+
+#error_modal .modal-dialog .modal-content .modal-header {
+    justify-content: center;
+    background-color: #dc3636;
+}
+
+#error_modal .modal-dialog .modal-content .modal-body {
+    text-align: center;
+    padding: 20px;
+}
+
+#error_modal .modal-dialog .modal-content .modal-body h3,
+#error_modal .modal-dialog .modal-content .modal-body p {
+    margin-bottom: 10px;
+}
+
+#error_modal .modal-dialog .modal-content .modal-footer{
+    justify-content: center;
+}
+
+#error_modal .modal-dialog .modal-content .modal-footer .btn-danger {
+    background-color: #EEB711;
+    border: 1px solid #EEB711;
+    padding: 10px 40px;
+}
+ .sign-up{
+    background-color: #001C54;
+    color: #fff;
+    text-transform: uppercase;
+    border: 1px solid #001C54;
+    text-align:center;
+    
+        width: 100%;
+        height: 50px !important;
+    
+    
+ }
+ .sign-up:hover{
+    background-color: transparent;
+    color: #001C54;
+}
